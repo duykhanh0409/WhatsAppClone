@@ -52,6 +52,9 @@
 		8B3150EF2CC38CD4005865E5 /* WhatSappClone */ = {
 			isa = PBXGroup;
 			children = (
+				8B486D8C2CC5471200185154 /* Module */,
+				8B486D8B2CC5470600185154 /* Core */,
+				8B486D8A2CC546FC00185154 /* Components */,
 				8B3150F02CC38CD4005865E5 /* WhatSappCloneApp.swift */,
 				8B3150F22CC38CD4005865E5 /* ContentView.swift */,
 				8B3150F42CC38CD6005865E5 /* Assets.xcassets */,
@@ -67,6 +70,27 @@
 				8B3150F82CC38CD6005865E5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8B486D8A2CC546FC00185154 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		8B486D8B2CC5470600185154 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8B486D8C2CC5471200185154 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

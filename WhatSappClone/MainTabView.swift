@@ -15,25 +15,30 @@ struct MainTabView: View {
     
     var body: some View {
         TabView {
-            placeHolderItemView("Updates")
+            UpdatesTabScreen()
                 .tabItem {
                     Image(systemName: Tab.updates.icon)
+                    Text(Tab.updates.title)
                 }
             placeHolderItemView("Calls")
                 .tabItem {
                     Image(systemName: Tab.calls.icon)
+                    Text(Tab.calls.title)
                 }
             placeHolderItemView("Communities")
                 .tabItem {
                     Image(systemName: Tab.communities.icon)
+                    Text(Tab.communities.title)
                 }
             placeHolderItemView("Chats")
                 .tabItem {
                     Image(systemName: Tab.chats.icon)
+                    Text(Tab.chats.title)
                 }
             placeHolderItemView("Settings")
                 .tabItem {
                     Image(systemName: Tab.settings.icon)
+                    Text(Tab.settings.title)
                 }
         }
     }
@@ -42,7 +47,7 @@ struct MainTabView: View {
         let appearance = UITabBarAppearance()
         appearance.configureWithOpaqueBackground()
         UITabBar.appearance().standardAppearance = appearance
-        UIView.appearance().backgroundColor = .systemBackground
+        UITabBar.appearance().scrollEdgeAppearance = appearance
     }
 }
 

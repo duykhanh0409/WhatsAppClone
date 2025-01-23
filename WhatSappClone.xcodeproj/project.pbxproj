@@ -11,6 +11,8 @@
 		8B3150F32CC38CD4005865E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3150F22CC38CD4005865E5 /* ContentView.swift */; };
 		8B3150F52CC38CD6005865E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3150F42CC38CD6005865E5 /* Assets.xcassets */; };
 		8B3150F92CC38CD6005865E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3150F82CC38CD6005865E5 /* Preview Assets.xcassets */; };
+		8BF377DA2D420DF1004B2E1D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF377D92D420DF1004B2E1D /* MainTabView.swift */; };
+		8BFA763D2D42199500B4FB50 /* UpdatesTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA763C2D42199500B4FB50 /* UpdatesTabScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		8B3150F42CC38CD6005865E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B3150F62CC38CD6005865E5 /* WhatSappClone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhatSappClone.entitlements; sourceTree = "<group>"; };
 		8B3150F82CC38CD6005865E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8BF377D92D420DF1004B2E1D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		8BFA763C2D42199500B4FB50 /* UpdatesTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTabScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 				8B486D8B2CC5470600185154 /* Core */,
 				8B486D8A2CC546FC00185154 /* Components */,
 				8B3150F02CC38CD4005865E5 /* WhatSappCloneApp.swift */,
+				8BFA763C2D42199500B4FB50 /* UpdatesTabScreen.swift */,
+				8BF377D92D420DF1004B2E1D /* MainTabView.swift */,
 				8B3150F22CC38CD4005865E5 /* ContentView.swift */,
 				8B3150F42CC38CD6005865E5 /* Assets.xcassets */,
 				8B3150F62CC38CD6005865E5 /* WhatSappClone.entitlements */,
@@ -165,6 +171,8 @@
 			files = (
 				8B3150F32CC38CD4005865E5 /* ContentView.swift in Sources */,
 				8B3150F12CC38CD4005865E5 /* WhatSappCloneApp.swift in Sources */,
+				8BFA763D2D42199500B4FB50 /* UpdatesTabScreen.swift in Sources */,
+				8BF377DA2D420DF1004B2E1D /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

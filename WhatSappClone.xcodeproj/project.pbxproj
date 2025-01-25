@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B06BED22D44D760000E5229 /* MessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B06BED12D44D760000E5229 /* MessageItem.swift */; };
+		8B06BED42D44D8CD000E5229 /* BubbleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B06BED32D44D8CD000E5229 /* BubbleTextView.swift */; };
+		8B06BED62D44D9B2000E5229 /* BubbleTailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B06BED52D44D9B2000E5229 /* BubbleTailView.swift */; };
+		8B06BED92D44DAB3000E5229 /* CustomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B06BED82D44DAB3000E5229 /* CustomModifier.swift */; };
 		8B3150F12CC38CD4005865E5 /* WhatSappCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3150F02CC38CD4005865E5 /* WhatSappCloneApp.swift */; };
 		8B3150F32CC38CD4005865E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3150F22CC38CD4005865E5 /* ContentView.swift */; };
 		8B3150F52CC38CD6005865E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3150F42CC38CD6005865E5 /* Assets.xcassets */; };
@@ -20,12 +24,17 @@
 		8B3561F82D44C4C600A83E25 /* ChatRoomScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561F72D44C4C600A83E25 /* ChatRoomScreen.swift */; };
 		8B3561FA2D44C65600A83E25 /* TextInputArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561F92D44C65600A83E25 /* TextInputArea.swift */; };
 		8B3561FC2D44C76200A83E25 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561FB2D44C76200A83E25 /* MessageListView.swift */; };
+		8B3561FE2D44CA1000A83E25 /* MessageListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561FD2D44CA1000A83E25 /* MessageListController.swift */; };
 		8B75DF472D42315D00C9842C /* CallsTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B75DF462D42315D00C9842C /* CallsTabScreen.swift */; };
 		8BF377DA2D420DF1004B2E1D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF377D92D420DF1004B2E1D /* MainTabView.swift */; };
 		8BFA763D2D42199500B4FB50 /* UpdatesTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA763C2D42199500B4FB50 /* UpdatesTabScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B06BED12D44D760000E5229 /* MessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageItem.swift; sourceTree = "<group>"; };
+		8B06BED32D44D8CD000E5229 /* BubbleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleTextView.swift; sourceTree = "<group>"; };
+		8B06BED52D44D9B2000E5229 /* BubbleTailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleTailView.swift; sourceTree = "<group>"; };
+		8B06BED82D44DAB3000E5229 /* CustomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifier.swift; sourceTree = "<group>"; };
 		8B3150ED2CC38CD4005865E5 /* WhatSappClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatSappClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3150F02CC38CD4005865E5 /* WhatSappCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatSappCloneApp.swift; sourceTree = "<group>"; };
 		8B3150F22CC38CD4005865E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +50,7 @@
 		8B3561F72D44C4C600A83E25 /* ChatRoomScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomScreen.swift; sourceTree = "<group>"; };
 		8B3561F92D44C65600A83E25 /* TextInputArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputArea.swift; sourceTree = "<group>"; };
 		8B3561FB2D44C76200A83E25 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
+		8B3561FD2D44CA1000A83E25 /* MessageListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListController.swift; sourceTree = "<group>"; };
 		8B75DF462D42315D00C9842C /* CallsTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsTabScreen.swift; sourceTree = "<group>"; };
 		8BF377D92D420DF1004B2E1D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		8BFA763C2D42199500B4FB50 /* UpdatesTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTabScreen.swift; sourceTree = "<group>"; };
@@ -57,6 +67,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B06BED02D44D74E000E5229 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B06BED12D44D760000E5229 /* MessageItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8B06BED72D44DA55000E5229 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8B06BED82D44DAB3000E5229 /* CustomModifier.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		8B3150E42CC38CD4005865E5 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +102,7 @@
 		8B3150EF2CC38CD4005865E5 /* WhatSappClone */ = {
 			isa = PBXGroup;
 			children = (
+				8B06BED72D44DA55000E5229 /* Helpers */,
 				8B3561DF2D434D0E00A83E25 /* Screens */,
 				8B486D8C2CC5471200185154 /* Module */,
 				8B486D8B2CC5470600185154 /* Core */,
@@ -189,6 +216,7 @@
 		8B3561F52D44C4AC00A83E25 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				8B06BED02D44D74E000E5229 /* Models */,
 				8B3561F62D44C4B200A83E25 /* Views */,
 			);
 			path = Chat;
@@ -200,6 +228,9 @@
 				8B3561F72D44C4C600A83E25 /* ChatRoomScreen.swift */,
 				8B3561F92D44C65600A83E25 /* TextInputArea.swift */,
 				8B3561FB2D44C76200A83E25 /* MessageListView.swift */,
+				8B3561FD2D44CA1000A83E25 /* MessageListController.swift */,
+				8B06BED32D44D8CD000E5229 /* BubbleTextView.swift */,
+				8B06BED52D44D9B2000E5229 /* BubbleTailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,19 +326,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B06BED22D44D760000E5229 /* MessageItem.swift in Sources */,
 				8B3561F82D44C4C600A83E25 /* ChatRoomScreen.swift in Sources */,
+				8B06BED62D44D9B2000E5229 /* BubbleTailView.swift in Sources */,
 				8B3561EA2D4367A200A83E25 /* ChannelTabScreen.swift in Sources */,
 				8B3561FA2D44C65600A83E25 /* TextInputArea.swift in Sources */,
 				8B3150F32CC38CD4005865E5 /* ContentView.swift in Sources */,
 				8B3150F12CC38CD4005865E5 /* WhatSappCloneApp.swift in Sources */,
+				8B06BED42D44D8CD000E5229 /* BubbleTextView.swift in Sources */,
 				8B3561F42D44BD3200A83E25 /* SettingsItem.swift in Sources */,
 				8B3561EC2D44A39400A83E25 /* ChannelItemView.swift in Sources */,
 				8BFA763D2D42199500B4FB50 /* UpdatesTabScreen.swift in Sources */,
 				8B3561FC2D44C76200A83E25 /* MessageListView.swift in Sources */,
 				8B3561E72D43547400A83E25 /* CommunityTabScreen.swift in Sources */,
+				8B3561FE2D44CA1000A83E25 /* MessageListController.swift in Sources */,
 				8B3561F12D44BC3400A83E25 /* SettingsItemView.swift in Sources */,
 				8B75DF472D42315D00C9842C /* CallsTabScreen.swift in Sources */,
 				8BF377DA2D420DF1004B2E1D /* MainTabView.swift in Sources */,
+				8B06BED92D44DAB3000E5229 /* CustomModifier.swift in Sources */,
 				8B3561EF2D44ADF500A83E25 /* SettingsTabScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

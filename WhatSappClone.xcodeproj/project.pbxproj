@@ -12,6 +12,8 @@
 		8B3150F52CC38CD6005865E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3150F42CC38CD6005865E5 /* Assets.xcassets */; };
 		8B3150F92CC38CD6005865E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3150F82CC38CD6005865E5 /* Preview Assets.xcassets */; };
 		8B3561E72D43547400A83E25 /* CommunityTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561E62D43547400A83E25 /* CommunityTabScreen.swift */; };
+		8B3561EA2D4367A200A83E25 /* ChannelTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561E92D4367A200A83E25 /* ChannelTabScreen.swift */; };
+		8B3561EC2D44A39400A83E25 /* ChannelItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561EB2D44A39400A83E25 /* ChannelItemView.swift */; };
 		8B75DF472D42315D00C9842C /* CallsTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B75DF462D42315D00C9842C /* CallsTabScreen.swift */; };
 		8BF377DA2D420DF1004B2E1D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF377D92D420DF1004B2E1D /* MainTabView.swift */; };
 		8BFA763D2D42199500B4FB50 /* UpdatesTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA763C2D42199500B4FB50 /* UpdatesTabScreen.swift */; };
@@ -25,6 +27,8 @@
 		8B3150F62CC38CD6005865E5 /* WhatSappClone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhatSappClone.entitlements; sourceTree = "<group>"; };
 		8B3150F82CC38CD6005865E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8B3561E62D43547400A83E25 /* CommunityTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTabScreen.swift; sourceTree = "<group>"; };
+		8B3561E92D4367A200A83E25 /* ChannelTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabScreen.swift; sourceTree = "<group>"; };
+		8B3561EB2D44A39400A83E25 /* ChannelItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelItemView.swift; sourceTree = "<group>"; };
 		8B75DF462D42315D00C9842C /* CallsTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsTabScreen.swift; sourceTree = "<group>"; };
 		8BF377D92D420DF1004B2E1D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		8BFA763C2D42199500B4FB50 /* UpdatesTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTabScreen.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 		8B3561E32D434EE800A83E25 /* Channel */ = {
 			isa = PBXGroup;
 			children = (
+				8B3561E82D43679200A83E25 /* Views */,
 			);
 			path = Channel;
 			sourceTree = "<group>";
@@ -136,6 +141,15 @@
 			isa = PBXGroup;
 			children = (
 				8B3561E62D43547400A83E25 /* CommunityTabScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8B3561E82D43679200A83E25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B3561E92D4367A200A83E25 /* ChannelTabScreen.swift */,
+				8B3561EB2D44A39400A83E25 /* ChannelItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,8 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B3561EA2D4367A200A83E25 /* ChannelTabScreen.swift in Sources */,
 				8B3150F32CC38CD4005865E5 /* ContentView.swift in Sources */,
 				8B3150F12CC38CD4005865E5 /* WhatSappCloneApp.swift in Sources */,
+				8B3561EC2D44A39400A83E25 /* ChannelItemView.swift in Sources */,
 				8BFA763D2D42199500B4FB50 /* UpdatesTabScreen.swift in Sources */,
 				8B3561E72D43547400A83E25 /* CommunityTabScreen.swift in Sources */,
 				8B75DF472D42315D00C9842C /* CallsTabScreen.swift in Sources */,

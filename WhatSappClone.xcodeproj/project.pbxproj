@@ -14,6 +14,9 @@
 		8B3561E72D43547400A83E25 /* CommunityTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561E62D43547400A83E25 /* CommunityTabScreen.swift */; };
 		8B3561EA2D4367A200A83E25 /* ChannelTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561E92D4367A200A83E25 /* ChannelTabScreen.swift */; };
 		8B3561EC2D44A39400A83E25 /* ChannelItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561EB2D44A39400A83E25 /* ChannelItemView.swift */; };
+		8B3561EF2D44ADF500A83E25 /* SettingsTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561EE2D44ADF500A83E25 /* SettingsTabScreen.swift */; };
+		8B3561F12D44BC3400A83E25 /* SettingsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561F02D44BC3400A83E25 /* SettingsItemView.swift */; };
+		8B3561F42D44BD3200A83E25 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561F32D44BD3200A83E25 /* SettingsItem.swift */; };
 		8B75DF472D42315D00C9842C /* CallsTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B75DF462D42315D00C9842C /* CallsTabScreen.swift */; };
 		8BF377DA2D420DF1004B2E1D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF377D92D420DF1004B2E1D /* MainTabView.swift */; };
 		8BFA763D2D42199500B4FB50 /* UpdatesTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA763C2D42199500B4FB50 /* UpdatesTabScreen.swift */; };
@@ -29,6 +32,9 @@
 		8B3561E62D43547400A83E25 /* CommunityTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTabScreen.swift; sourceTree = "<group>"; };
 		8B3561E92D4367A200A83E25 /* ChannelTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabScreen.swift; sourceTree = "<group>"; };
 		8B3561EB2D44A39400A83E25 /* ChannelItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelItemView.swift; sourceTree = "<group>"; };
+		8B3561EE2D44ADF500A83E25 /* SettingsTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabScreen.swift; sourceTree = "<group>"; };
+		8B3561F02D44BC3400A83E25 /* SettingsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemView.swift; sourceTree = "<group>"; };
+		8B3561F32D44BD3200A83E25 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
 		8B75DF462D42315D00C9842C /* CallsTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsTabScreen.swift; sourceTree = "<group>"; };
 		8BF377D92D420DF1004B2E1D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		8BFA763C2D42199500B4FB50 /* UpdatesTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTabScreen.swift; sourceTree = "<group>"; };
@@ -133,6 +139,8 @@
 		8B3561E42D434EED00A83E25 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				8B3561F22D44BD1B00A83E25 /* Models */,
+				8B3561ED2D44ADDE00A83E25 /* View */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -152,6 +160,23 @@
 				8B3561EB2D44A39400A83E25 /* ChannelItemView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8B3561ED2D44ADDE00A83E25 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B3561EE2D44ADF500A83E25 /* SettingsTabScreen.swift */,
+				8B3561F02D44BC3400A83E25 /* SettingsItemView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B3561F22D44BD1B00A83E25 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B3561F32D44BD3200A83E25 /* SettingsItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8B486D8A2CC546FC00185154 /* Components */ = {
@@ -248,11 +273,14 @@
 				8B3561EA2D4367A200A83E25 /* ChannelTabScreen.swift in Sources */,
 				8B3150F32CC38CD4005865E5 /* ContentView.swift in Sources */,
 				8B3150F12CC38CD4005865E5 /* WhatSappCloneApp.swift in Sources */,
+				8B3561F42D44BD3200A83E25 /* SettingsItem.swift in Sources */,
 				8B3561EC2D44A39400A83E25 /* ChannelItemView.swift in Sources */,
 				8BFA763D2D42199500B4FB50 /* UpdatesTabScreen.swift in Sources */,
 				8B3561E72D43547400A83E25 /* CommunityTabScreen.swift in Sources */,
+				8B3561F12D44BC3400A83E25 /* SettingsItemView.swift in Sources */,
 				8B75DF472D42315D00C9842C /* CallsTabScreen.swift in Sources */,
 				8BF377DA2D420DF1004B2E1D /* MainTabView.swift in Sources */,
+				8B3561EF2D44ADF500A83E25 /* SettingsTabScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

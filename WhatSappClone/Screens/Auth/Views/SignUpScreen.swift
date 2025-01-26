@@ -26,6 +26,9 @@ struct SignUpScreen: View {
             
             AuthButton(title: "Create an Account") {
                 //
+                Task {
+                    await authScreenModel.handleSignUp()
+                }
             }
             .disabled(authScreenModel.disableSignUpButton)
             
@@ -41,6 +44,9 @@ struct SignUpScreen: View {
         }
         .ignoresSafeArea()
         .navigationBarBackButtonHidden()
+        .alert(isPresented: $authScreenModel.errorState.showError) {
+            Alert(title: Text(authScreenModel.errorState.errorMessage), dismissButton: .default(Text("Oke")))
+        }
     }
     
     private func backButton() -> some View {

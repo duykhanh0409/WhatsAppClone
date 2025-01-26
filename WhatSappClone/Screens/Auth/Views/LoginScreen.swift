@@ -35,6 +35,9 @@ struct LoginScreen: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.teal.gradient)
             .ignoresSafeArea()
+            .alert(isPresented: $authScreenModel.errorState.showError) {
+                Alert(title: Text(authScreenModel.errorState.errorMessage), dismissButton: .default(Text("Oke")))
+            }
         }
     }
     
@@ -61,11 +64,11 @@ struct LoginScreen: View {
                 Image(systemName: "sparkles")
                 
                 (
-                
+                    
                     Text("Don't have an account ? ")
                     +
                     Text("Create one").bold()
-                
+                    
                 )
                 Image(systemName: "sparkles")
             }

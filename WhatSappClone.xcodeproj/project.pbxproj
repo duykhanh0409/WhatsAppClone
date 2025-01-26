@@ -41,6 +41,7 @@
 		8B06BF142D44FBF3000E5229 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B06BF132D44FBF3000E5229 /* AuthButton.swift */; };
 		8B06BF162D44FE48000E5229 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B06BF152D44FE48000E5229 /* SignUpScreen.swift */; };
 		8B06BF192D44FF1A000E5229 /* AuthScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B06BF182D44FF1A000E5229 /* AuthScreenModel.swift */; };
+		8B0734D32D453AC7008B9A2C /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0734D22D453AC7008B9A2C /* AuthProvider.swift */; };
 		8B3150F12CC38CD4005865E5 /* WhatSappCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3150F02CC38CD4005865E5 /* WhatSappCloneApp.swift */; };
 		8B3150F32CC38CD4005865E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3150F22CC38CD4005865E5 /* ContentView.swift */; };
 		8B3150F52CC38CD6005865E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3150F42CC38CD6005865E5 /* Assets.xcassets */; };
@@ -56,6 +57,10 @@
 		8B3561FC2D44C76200A83E25 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561FB2D44C76200A83E25 /* MessageListView.swift */; };
 		8B3561FE2D44CA1000A83E25 /* MessageListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561FD2D44CA1000A83E25 /* MessageListController.swift */; };
 		8B75DF472D42315D00C9842C /* CallsTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B75DF462D42315D00C9842C /* CallsTabScreen.swift */; };
+		8BBBF9732D46117E00867751 /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBBF9722D46117E00867751 /* RootScreen.swift */; };
+		8BBBF9762D46119100867751 /* RootScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBBF9752D46119100867751 /* RootScreenModel.swift */; };
+		8BBBF9792D4628F800867751 /* UserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBBF9782D4628F800867751 /* UserItem.swift */; };
+		8BBBF97C2D46293500867751 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBBF97B2D46293500867751 /* FirebaseConstants.swift */; };
 		8BF377DA2D420DF1004B2E1D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF377D92D420DF1004B2E1D /* MainTabView.swift */; };
 		8BFA763D2D42199500B4FB50 /* UpdatesTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA763C2D42199500B4FB50 /* UpdatesTabScreen.swift */; };
 /* End PBXBuildFile section */
@@ -74,6 +79,7 @@
 		8B06BF132D44FBF3000E5229 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		8B06BF152D44FE48000E5229 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		8B06BF182D44FF1A000E5229 /* AuthScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreenModel.swift; sourceTree = "<group>"; };
+		8B0734D22D453AC7008B9A2C /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		8B3150ED2CC38CD4005865E5 /* WhatSappClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatSappClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3150F02CC38CD4005865E5 /* WhatSappCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatSappCloneApp.swift; sourceTree = "<group>"; };
 		8B3150F22CC38CD4005865E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +97,10 @@
 		8B3561FB2D44C76200A83E25 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 		8B3561FD2D44CA1000A83E25 /* MessageListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListController.swift; sourceTree = "<group>"; };
 		8B75DF462D42315D00C9842C /* CallsTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsTabScreen.swift; sourceTree = "<group>"; };
+		8BBBF9722D46117E00867751 /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
+		8BBBF9752D46119100867751 /* RootScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreenModel.swift; sourceTree = "<group>"; };
+		8BBBF9782D4628F800867751 /* UserItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItem.swift; sourceTree = "<group>"; };
+		8BBBF97B2D46293500867751 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		8BF377D92D420DF1004B2E1D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		8BFA763C2D42199500B4FB50 /* UpdatesTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTabScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +156,8 @@
 		8B06BF0B2D44FB03000E5229 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				8BBBF9772D4628EC00867751 /* Models */,
+				8B0734D12D453A72008B9A2C /* Services */,
 				8B06BF172D44FEFA000E5229 /* ViewModels */,
 				8B06BF0C2D44FB12000E5229 /* Views */,
 			);
@@ -172,6 +184,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		8B0734D12D453A72008B9A2C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8B0734D22D453AC7008B9A2C /* AuthProvider.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		8B3150E42CC38CD4005865E5 = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +211,7 @@
 		8B3150EF2CC38CD4005865E5 /* WhatSappClone */ = {
 			isa = PBXGroup;
 			children = (
+				8BBBF97A2D46292500867751 /* Utils */,
 				8B06BED72D44DA55000E5229 /* Helpers */,
 				8B3561DF2D434D0E00A83E25 /* Screens */,
 				8B486D8C2CC5471200185154 /* Module */,
@@ -218,6 +239,7 @@
 		8B3561DF2D434D0E00A83E25 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				8BBBF9702D46116700867751 /* Root */,
 				8B06BF0B2D44FB03000E5229 /* Auth */,
 				8B3561F52D44C4AC00A83E25 /* Chat */,
 				8B3561E42D434EED00A83E25 /* Settings */,
@@ -349,6 +371,47 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
+		8BBBF9702D46116700867751 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				8BBBF9742D46118200867751 /* ViewModel */,
+				8BBBF9712D46116D00867751 /* Views */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		8BBBF9712D46116D00867751 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8BBBF9722D46117E00867751 /* RootScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8BBBF9742D46118200867751 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8BBBF9752D46119100867751 /* RootScreenModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8BBBF9772D4628EC00867751 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8BBBF9782D4628F800867751 /* UserItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8BBBF97A2D46292500867751 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8BBBF97B2D46293500867751 /* FirebaseConstants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -423,24 +486,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BBBF9732D46117E00867751 /* RootScreen.swift in Sources */,
 				8B06BED22D44D760000E5229 /* MessageItem.swift in Sources */,
 				8B3561F82D44C4C600A83E25 /* ChatRoomScreen.swift in Sources */,
 				8B06BEDD2D44EA38000E5229 /* BubbdleAudioView.swift in Sources */,
 				8B06BED62D44D9B2000E5229 /* BubbleTailView.swift in Sources */,
 				8B3561EA2D4367A200A83E25 /* ChannelTabScreen.swift in Sources */,
+				8BBBF9792D4628F800867751 /* UserItem.swift in Sources */,
 				8B3561FA2D44C65600A83E25 /* TextInputArea.swift in Sources */,
 				8B3150F32CC38CD4005865E5 /* ContentView.swift in Sources */,
 				8B06BEDB2D44E53E000E5229 /* BubbleImageView.swift in Sources */,
 				8B3150F12CC38CD4005865E5 /* WhatSappCloneApp.swift in Sources */,
 				8B06BF122D44FBDE000E5229 /* AuthTextField.swift in Sources */,
+				8BBBF9762D46119100867751 /* RootScreenModel.swift in Sources */,
 				8B06BF0E2D44FB1E000E5229 /* LoginScreen.swift in Sources */,
 				8B06BF142D44FBF3000E5229 /* AuthButton.swift in Sources */,
 				8B06BED42D44D8CD000E5229 /* BubbleTextView.swift in Sources */,
+				8BBBF97C2D46293500867751 /* FirebaseConstants.swift in Sources */,
 				8B06BF162D44FE48000E5229 /* SignUpScreen.swift in Sources */,
 				8B3561F42D44BD3200A83E25 /* SettingsItem.swift in Sources */,
 				8B3561EC2D44A39400A83E25 /* ChannelItemView.swift in Sources */,
 				8BFA763D2D42199500B4FB50 /* UpdatesTabScreen.swift in Sources */,
 				8B06BF192D44FF1A000E5229 /* AuthScreenModel.swift in Sources */,
+				8B0734D32D453AC7008B9A2C /* AuthProvider.swift in Sources */,
 				8B3561FC2D44C76200A83E25 /* MessageListView.swift in Sources */,
 				8B3561E72D43547400A83E25 /* CommunityTabScreen.swift in Sources */,
 				8B3561FE2D44CA1000A83E25 /* MessageListController.swift in Sources */,

@@ -37,5 +37,16 @@ final class AuthScreenModel: ObservableObject {
             errorState = (true, error.localizedDescription)
         }
     }
+    
+    func handleLogined() async {
+        isLoading = true
+        
+        do {
+            try await AuthManager.shared.login(with: email, and: password)
+        }catch {
+            isLoading = false
+            errorState = (true, "Failed to login \(error.localizedDescription)")
+        }
+    }
 }
 

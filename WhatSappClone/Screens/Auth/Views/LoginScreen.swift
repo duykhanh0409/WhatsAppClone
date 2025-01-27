@@ -23,6 +23,9 @@ struct LoginScreen: View {
                 
                 AuthButton(title: "Log in now") {
                     //
+                    Task{
+                        await authScreenModel.handleLogined()
+                    }
                 }
                 .disabled(authScreenModel.disableLoginButton)
                 

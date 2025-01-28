@@ -17,6 +17,9 @@ struct ChatPartnerPickerScreen: View {
             List {
                 ForEach(ChatPartnerPickerOption.allCases) { item in
                     HeaderItemView(item: item)
+                        .onTapGesture {
+                            viewModel.navStack.append(.groupPartnerPicker)
+                        }
                 }
                 
                 Section {
@@ -29,11 +32,15 @@ struct ChatPartnerPickerScreen: View {
                         .bold()
                 }
             }
-            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search name or number")
+            .searchable(
+                text: $searchText,
+                placement: .navigationBarDrawer(displayMode: .always),
+                prompt: "Search name or number"
+            )
             .navigationTitle("New Chat")
-            .navigationDestination(for: ChannelCreationRoute.self, destination: { route in
-                destinationView(for:route)
-            })
+            .navigationDestination(for: ChannelCreationRoute.self) { route in
+                destinationView(for: route)
+            }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 trailingNavItem()
@@ -42,19 +49,19 @@ struct ChatPartnerPickerScreen: View {
     }
 }
 
-
 extension ChatPartnerPickerScreen {
-    
     @ViewBuilder
     private func destinationView(for route: ChannelCreationRoute) -> some View {
         switch route {
-        case .addGroupChatMembers:
-            Text("SETUP GROUP CHAT")
+        case .groupPartnerPicker:
+            GroupPartnerPickerScreen(viewModel: viewModel)
         case .setUpGroupChat:
-            Text("SETUP GROUP CHAT")
+            NewGroupSetUpScreen(viewModel: viewModel)
         }
     }
-    
+}
+
+extension ChatPartnerPickerScreen {
     @ToolbarContentBuilder
     private func trailingNavItem() -> some ToolbarContent {
         ToolbarItem(placement: .topBarTrailing) {
@@ -65,7 +72,6 @@ extension ChatPartnerPickerScreen {
     private func cancelButton() -> some View {
         Button {
             dismiss()
-            
         } label: {
             Image(systemName: "xmark")
                 .font(.footnote)

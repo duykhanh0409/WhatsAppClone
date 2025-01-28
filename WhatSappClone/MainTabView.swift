@@ -88,5 +88,5 @@ extension MainTabView {
 }
 
 #Preview {
-    MainTabView(.placehodlder)
+    MainTabView(.placeholder)
 }

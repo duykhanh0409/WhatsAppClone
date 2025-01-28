@@ -10,7 +10,7 @@ import Foundation
 
 struct UserItem: Identifiable, Hashable, Decodable {
     let uid: String
-    let userName: String
+    let username: String
     let email: String
     var bio: String? = nil
     var profileImageUrl: String? = nil
@@ -21,9 +21,9 @@ struct UserItem: Identifiable, Hashable, Decodable {
         return bio ?? "Hey there! I am using whatsapp"
     }
     
-    static let placehodlder = UserItem(
+    static let placeholder = UserItem(
         uid: "1",
-        userName: "Khanh",
+        username: "Khanh",
         email: "Khanh@gmail.com"
     )
 }
@@ -31,7 +31,7 @@ struct UserItem: Identifiable, Hashable, Decodable {
 extension UserItem {
     init(dictionary: [String: Any]){
         self.uid = dictionary[String.uid] as? String ?? ""
-        self.userName = dictionary[String.username] as? String ?? ""
+        self.username = dictionary[String.username] as? String ?? ""
         self.email = dictionary[String.email] as? String ?? ""
         self.bio = dictionary[String.bio] as? String ?? nil
         self.profileImageUrl = dictionary[String.profileImageUrl] as? String ?? nil

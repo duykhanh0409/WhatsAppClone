@@ -79,7 +79,7 @@ final class AuthManager: AuthProvider {
         do {
             let authResult = try await Auth.auth().createUser(withEmail: email, password: password)
             let uid = authResult.user.uid
-            let newUser = UserItem(uid: uid, userName: username, email: email)
+            let newUser = UserItem(uid: uid, username: username, email: email)
             try await saveUserInfoDatebase(user: newUser)
             self.authState.send(.loggedIn(newUser))
         } catch {
@@ -104,7 +104,7 @@ final class AuthManager: AuthProvider {
 extension AuthManager {
     private func saveUserInfoDatebase(user: UserItem) async throws {
         do{
-            let userDictinary: [String: Any] = [.uid: user.uid,.username: user.userName, .email: user.email]
+            let userDictinary: [String: Any] = [.uid: user.uid,.username: user.username, .email: user.email]
             try await FirebaseConstants.UserRef.child(user.uid).setValue(userDictinary)
         }catch {
             print("failed to save user info to database: \(error.localizedDescription)")

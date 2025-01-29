@@ -63,6 +63,7 @@
 		8B75DF472D42315D00C9842C /* CallsTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B75DF462D42315D00C9842C /* CallsTabScreen.swift */; };
 		8BAC68522D4891A600E77D57 /* SelectedChatPartnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC68512D4891A600E77D57 /* SelectedChatPartnerView.swift */; };
 		8BAC68542D48956700E77D57 /* NewGroupSetupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC68532D48956700E77D57 /* NewGroupSetupScreen.swift */; };
+		8BAC68572D4A2F7100E77D57 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC68562D4A2F7100E77D57 /* UserService.swift */; };
 		8BBBF9732D46117E00867751 /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBBF9722D46117E00867751 /* RootScreen.swift */; };
 		8BBBF9762D46119100867751 /* RootScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBBF9752D46119100867751 /* RootScreenModel.swift */; };
 		8BBBF9792D4628F800867751 /* UserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBBF9782D4628F800867751 /* UserItem.swift */; };
@@ -109,6 +110,7 @@
 		8B75DF462D42315D00C9842C /* CallsTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsTabScreen.swift; sourceTree = "<group>"; };
 		8BAC68512D4891A600E77D57 /* SelectedChatPartnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedChatPartnerView.swift; sourceTree = "<group>"; };
 		8BAC68532D48956700E77D57 /* NewGroupSetupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupSetupScreen.swift; sourceTree = "<group>"; };
+		8BAC68562D4A2F7100E77D57 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		8BBBF9722D46117E00867751 /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 		8BBBF9752D46119100867751 /* RootScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreenModel.swift; sourceTree = "<group>"; };
 		8BBBF9782D4628F800867751 /* UserItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItem.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		8B3150EF2CC38CD4005865E5 /* WhatSappClone */ = {
 			isa = PBXGroup;
 			children = (
+				8BAC68552D4A2F5700E77D57 /* Service */,
 				8BBBF97A2D46292500867751 /* Utils */,
 				8B06BED72D44DA55000E5229 /* Helpers */,
 				8B3561DF2D434D0E00A83E25 /* Screens */,
@@ -397,6 +400,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		8BAC68552D4A2F5700E77D57 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8BAC68562D4A2F7100E77D57 /* UserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		8BBBF9702D46116700867751 /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -544,6 +555,7 @@
 				8B717BF32D47D64600D7C95F /* GroupPartnerPickerScreen.swift in Sources */,
 				8B3561FE2D44CA1000A83E25 /* MessageListController.swift in Sources */,
 				8BAC68522D4891A600E77D57 /* SelectedChatPartnerView.swift in Sources */,
+				8BAC68572D4A2F7100E77D57 /* UserService.swift in Sources */,
 				8B3561F12D44BC3400A83E25 /* SettingsItemView.swift in Sources */,
 				8B75DF472D42315D00C9842C /* CallsTabScreen.swift in Sources */,
 				8BF377DA2D420DF1004B2E1D /* MainTabView.swift in Sources */,

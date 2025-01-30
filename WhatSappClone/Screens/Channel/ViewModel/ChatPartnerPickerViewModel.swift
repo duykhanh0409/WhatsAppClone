@@ -1,9 +1,3 @@
-//
-//  ChatPartnerPickerViewModel.swift
-//  WhatSappClone
-//
-//  Created by Khanh Nguyen on 27/1/25.
-//
 
 import Foundation
 

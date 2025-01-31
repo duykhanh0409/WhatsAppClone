@@ -1,5 +1,7 @@
 
 import Foundation
+import Firebase
+import FirebaseAuth
 
 enum ChannelCreationRoute {
     case groupPartnerPicker
@@ -38,7 +40,11 @@ final class ChatPartnerPickerViewModel: ObservableObject {
     func fetchUser() async {
         do {
             let userNode = try await UserService.paginateUsers(lastCursor: lastCursor, pageSize: 5)
-            self.users.append(contentsOf: userNode.users)
+            var fetchedUser = userNode.users
+            guard let currentUid = Auth.auth().currentUser?.uid else { return }
+            fetchedUser = fetchedUser.filter {$0.uid != currentUid}
+            
+            self.users.append(contentsOf: fetchedUser)
             self.lastCursor = userNode.currentCursor
         }catch {
             print("😭 Fetch user error: \(error.localizedDescription)")

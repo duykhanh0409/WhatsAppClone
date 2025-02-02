@@ -68,6 +68,8 @@
 		8BBBF9762D46119100867751 /* RootScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBBF9752D46119100867751 /* RootScreenModel.swift */; };
 		8BBBF9792D4628F800867751 /* UserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBBF9782D4628F800867751 /* UserItem.swift */; };
 		8BBBF97C2D46293500867751 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBBF97B2D46293500867751 /* FirebaseConstants.swift */; };
+		8BDA08492D4F164C002C649B /* ChannelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA08482D4F164C002C649B /* ChannelItem.swift */; };
+		8BDA084B2D4F1E3B002C649B /* ChannelTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA084A2D4F1E3B002C649B /* ChannelTabViewModel.swift */; };
 		8BF377DA2D420DF1004B2E1D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF377D92D420DF1004B2E1D /* MainTabView.swift */; };
 		8BFA763D2D42199500B4FB50 /* UpdatesTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA763C2D42199500B4FB50 /* UpdatesTabScreen.swift */; };
 /* End PBXBuildFile section */
@@ -115,6 +117,8 @@
 		8BBBF9752D46119100867751 /* RootScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreenModel.swift; sourceTree = "<group>"; };
 		8BBBF9782D4628F800867751 /* UserItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItem.swift; sourceTree = "<group>"; };
 		8BBBF97B2D46293500867751 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
+		8BDA08482D4F164C002C649B /* ChannelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelItem.swift; sourceTree = "<group>"; };
+		8BDA084A2D4F1E3B002C649B /* ChannelTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabViewModel.swift; sourceTree = "<group>"; };
 		8BF377D92D420DF1004B2E1D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		8BFA763C2D42199500B4FB50 /* UpdatesTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTabScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -293,6 +297,7 @@
 		8B3561E32D434EE800A83E25 /* Channel */ = {
 			isa = PBXGroup;
 			children = (
+				8BDA08472D4F1628002C649B /* Models */,
 				8B717BEF2D47468D00D7C95F /* ViewModel */,
 				8B3561E82D43679200A83E25 /* Views */,
 			);
@@ -396,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				8B717BF02D4746AB00D7C95F /* ChatPartnerPickerViewModel.swift */,
+				8BDA084A2D4F1E3B002C649B /* ChannelTabViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -447,6 +453,14 @@
 				8BBBF97B2D46293500867751 /* FirebaseConstants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		8BDA08472D4F1628002C649B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8BDA08482D4F164C002C649B /* ChannelItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -527,6 +541,7 @@
 				8B06BED22D44D760000E5229 /* MessageItem.swift in Sources */,
 				8B3561F82D44C4C600A83E25 /* ChatRoomScreen.swift in Sources */,
 				8B06BEDD2D44EA38000E5229 /* BubbdleAudioView.swift in Sources */,
+				8BDA08492D4F164C002C649B /* ChannelItem.swift in Sources */,
 				8B06BED62D44D9B2000E5229 /* BubbleTailView.swift in Sources */,
 				8B3561EA2D4367A200A83E25 /* ChannelTabScreen.swift in Sources */,
 				8BBBF9792D4628F800867751 /* UserItem.swift in Sources */,
@@ -557,6 +572,7 @@
 				8BAC68522D4891A600E77D57 /* SelectedChatPartnerView.swift in Sources */,
 				8BAC68572D4A2F7100E77D57 /* UserService.swift in Sources */,
 				8B3561F12D44BC3400A83E25 /* SettingsItemView.swift in Sources */,
+				8BDA084B2D4F1E3B002C649B /* ChannelTabViewModel.swift in Sources */,
 				8B75DF472D42315D00C9842C /* CallsTabScreen.swift in Sources */,
 				8BF377DA2D420DF1004B2E1D /* MainTabView.swift in Sources */,
 				8B06BF102D44FB50000E5229 /* AuthHeaderView.swift in Sources */,

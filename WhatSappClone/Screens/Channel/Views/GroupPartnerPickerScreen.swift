@@ -9,8 +9,9 @@ import SwiftUI
 
 struct GroupPartnerPickerScreen: View {
     @ObservedObject var viewModel: ChatPartnerPickerViewModel
-    
     @State private var searchText = ""
+    
+    
     var body: some View {
         List {
             

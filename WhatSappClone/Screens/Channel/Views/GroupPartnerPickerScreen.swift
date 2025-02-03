@@ -52,7 +52,7 @@ struct GroupPartnerPickerScreen: View {
             .frame(maxWidth:.infinity)
             .listRowBackground(Color.clear)
             .task {
-                await viewModel.fetchUser()
+                await viewModel.fetchUsers()
             }
     }
     

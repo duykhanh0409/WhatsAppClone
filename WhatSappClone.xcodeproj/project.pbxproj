@@ -70,6 +70,7 @@
 		8BBBF97C2D46293500867751 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBBF97B2D46293500867751 /* FirebaseConstants.swift */; };
 		8BDA08492D4F164C002C649B /* ChannelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA08482D4F164C002C649B /* ChannelItem.swift */; };
 		8BDA084B2D4F1E3B002C649B /* ChannelTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA084A2D4F1E3B002C649B /* ChannelTabViewModel.swift */; };
+		8BDA084E2D4F3DBF002C649B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA084D2D4F3DBF002C649B /* String+Extensions.swift */; };
 		8BF377DA2D420DF1004B2E1D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF377D92D420DF1004B2E1D /* MainTabView.swift */; };
 		8BFA763D2D42199500B4FB50 /* UpdatesTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA763C2D42199500B4FB50 /* UpdatesTabScreen.swift */; };
 /* End PBXBuildFile section */
@@ -119,6 +120,7 @@
 		8BBBF97B2D46293500867751 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		8BDA08482D4F164C002C649B /* ChannelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelItem.swift; sourceTree = "<group>"; };
 		8BDA084A2D4F1E3B002C649B /* ChannelTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabViewModel.swift; sourceTree = "<group>"; };
+		8BDA084D2D4F3DBF002C649B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		8BF377D92D420DF1004B2E1D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		8BFA763C2D42199500B4FB50 /* UpdatesTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTabScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -229,6 +231,7 @@
 		8B3150EF2CC38CD4005865E5 /* WhatSappClone */ = {
 			isa = PBXGroup;
 			children = (
+				8BDA084C2D4F3D8E002C649B /* Extensions */,
 				8BAC68552D4A2F5700E77D57 /* Service */,
 				8BBBF97A2D46292500867751 /* Utils */,
 				8B06BED72D44DA55000E5229 /* Helpers */,
@@ -463,6 +466,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		8BDA084C2D4F3D8E002C649B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8BDA084D2D4F3DBF002C649B /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -559,6 +570,7 @@
 				8B06BF162D44FE48000E5229 /* SignUpScreen.swift in Sources */,
 				8B3561F42D44BD3200A83E25 /* SettingsItem.swift in Sources */,
 				8B717BEC2D47411000D7C95F /* ChatPartnerPickerScreen.swift in Sources */,
+				8BDA084E2D4F3DBF002C649B /* String+Extensions.swift in Sources */,
 				8B3561EC2D44A39400A83E25 /* ChannelItemView.swift in Sources */,
 				8BAC68542D48956700E77D57 /* NewGroupSetupScreen.swift in Sources */,
 				8BFA763D2D42199500B4FB50 /* UpdatesTabScreen.swift in Sources */,

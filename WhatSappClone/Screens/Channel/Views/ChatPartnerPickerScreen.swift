@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct
-ChatPartnerPickerScreen: View {
+struct ChatPartnerPickerScreen: View {
     @State private var searchText = ""
     @Environment(\.dismiss) private var dismiss
     @StateObject private var viewModel = ChatPartnerPickerViewModel()
@@ -19,7 +18,7 @@ ChatPartnerPickerScreen: View {
         NavigationStack(path: $viewModel.navStack) {
             List {
                 ForEach(ChatPartnerPickerOption.allCases) { item in
-                    HeaderItemView(item: item){
+                    HeaderItemView(item: item) {
                         guard item == ChatPartnerPickerOption.newGroup else { return }
                         viewModel.navStack.append(.groupPartnerPicker)
                     }
@@ -29,7 +28,15 @@ ChatPartnerPickerScreen: View {
                     ForEach(viewModel.users) { user in
                         ChatPartnerRowView(user: user)
                             .onTapGesture {
-                                onCreate(.placeholder)
+                                viewModel.selectedChatPartners.append(user)
+                                let createChannel = viewModel.createChannel(nil)
+                                switch createChannel {
+                                case .success(let channelItem):
+                                    onCreate(channelItem)
+                                    
+                                case .failure(let error):
+                                    print("failed to create channel: \(error.localizedDescription)")
+                                }
                             }
                     }
                 } header: {
@@ -41,7 +48,6 @@ ChatPartnerPickerScreen: View {
                 if viewModel.isPaginatable {
                     loadMoreUsersView()
                 }
-                
             }
             .searchable(
                 text: $searchText,
@@ -59,12 +65,12 @@ ChatPartnerPickerScreen: View {
         }
     }
     
-    private func loadMoreUsersView () -> some View {
+    private func loadMoreUsersView() -> some View {
         ProgressView()
-            .frame(maxWidth:.infinity)
+            .frame(maxWidth: .infinity)
             .listRowBackground(Color.clear)
             .task {
-                await viewModel.fetchUser()
+                await viewModel.fetchUsers()
             }
     }
 }
@@ -108,6 +114,7 @@ extension ChatPartnerPickerScreen {
     private struct HeaderItemView: View {
         let item: ChatPartnerPickerOption
         let onTapHandler: () -> Void
+        
         var body: some View {
             Button {
                 onTapHandler()
@@ -156,7 +163,7 @@ enum ChatPartnerPickerOption: String, CaseIterable, Identifiable {
 }
 
 #Preview {
-    ChatPartnerPickerScreen {channel in
+    ChatPartnerPickerScreen { channel in
         
     }
 }

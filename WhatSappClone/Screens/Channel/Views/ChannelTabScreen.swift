@@ -19,7 +19,7 @@ struct ChannelTabScreen: View {
                 
                 ForEach(0..<2){ _ in
                     NavigationLink {
-                        ChatRoomScreen()
+                        ChatRoomScreen(channel: .placeholder)
                     } label: {
                         ChannelItemView()
                     }
@@ -42,7 +42,10 @@ struct ChannelTabScreen: View {
                 }
             }
             .navigationDestination(isPresented: $viewModel.navigationToChatRoom) {
-                ChatRoomScreen()
+                if let newChannel = viewModel.newChannel{
+                    ChatRoomScreen(channel: newChannel)
+                }
+                
             }
         }
         

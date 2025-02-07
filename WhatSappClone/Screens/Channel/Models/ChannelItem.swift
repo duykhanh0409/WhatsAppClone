@@ -14,7 +14,7 @@ struct ChannelItem: Identifiable {
     var lastMessage: String
     var creationDate: Date
     var lastMessageTimeStamp: Date
-    var membersCount: UInt
+    var membersCount: Int
     var adminUids: [String]
     var membersUids: [String]
     var members: [UserItem]
@@ -36,13 +36,27 @@ struct ChannelItem: Identifiable {
         }
         
         if isGroupChat {
-            return "Group chat"
+            return groupMemeberNames
         }else {
             return memebersExcludingMe.first?.username ?? "Unknown user"
         }
     }
     
     static let placeholder = ChannelItem.init(id: "1", lastMessage: "Hello world", creationDate: Date(), lastMessageTimeStamp: Date(), membersCount: 2, adminUids: [], membersUids: [], members: [], createdBy: "")
+    
+    private var groupMemeberNames: String {
+        let memeberCount = memebersExcludingMe.count
+        let fullNames: [String] = memebersExcludingMe.map {$0.username}
+        
+        if memeberCount == 2 {
+            // username 1 and user name 2
+            return fullNames.joined(separator: " and ")
+        } else if memeberCount > 2 {
+            return fullNames.prefix(2).joined(separator: ", ") + " and \(memeberCount - 2) others"
+        }
+        
+        return "unknow"
+    }
     
 }
 
@@ -55,7 +69,7 @@ extension ChannelItem {
         self.creationDate = Date(timeIntervalSince1970: creationInterval)
         let lastMsgTimeStampInterval = dict[.lastMessageTimeStamp] as? Double ?? 0
         self.lastMessageTimeStamp = Date(timeIntervalSince1970: lastMsgTimeStampInterval)
-        self.membersCount = dict[.membersCount] as? UInt ?? 0
+        self.membersCount = dict[.membersCount] as? Int ?? 0
         self.adminUids = dict[.adminUids] as? [String] ?? []
         self.thumbnailUrl = dict[.thumbnailUrl] as? String ?? nil
         self.membersUids = dict[.membersUids] as? [String] ?? []

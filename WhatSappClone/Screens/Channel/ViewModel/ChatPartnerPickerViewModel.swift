@@ -63,6 +63,12 @@ final class ChatPartnerPickerViewModel: ObservableObject {
         }
     }
     
+    func deSelectAllChatParners() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.selectedChatPartners.removeAll()
+        }
+    }
+    
     func handleItemSelection(_ item: UserItem) {
         if isUserSelected(item) {
             guard let index = selectedChatPartners.firstIndex(where: { $0.uid == item.uid }) else { return }
@@ -81,6 +87,17 @@ final class ChatPartnerPickerViewModel: ObservableObject {
 //
 //    }
     
+    func createDirectChannel(_ chatPartner: UserItem, completion: @escaping (_ newChannel: ChannelItem) -> Void ) {
+        selectedChatPartners.append(chatPartner)
+        let channelCreation = createChannel(nil)
+        switch channelCreation {
+        case .success(let newChannel):
+            completion(newChannel)
+        case .failure(let error):
+            print("💥 Failed to create direct channel: \(error)")
+        }
+    }
+    
     func createGroupChannel(_ groupName:String?, completion: @escaping (_ newChannel: ChannelItem) -> Void ) {
         let channelCreation = createChannel(groupName)
         switch channelCreation {
@@ -91,22 +108,24 @@ final class ChatPartnerPickerViewModel: ObservableObject {
         }
     }
     
-    func createChannel(_ channelName: String?) -> Result<ChannelItem, Error> {
+    private func createChannel(_ channelName: String?) -> Result<ChannelItem, Error> {
         guard !selectedChatPartners.isEmpty else { return .failure(ChannelCreationError.noChatPartner) }
         
         guard
             let channelId = FirebaseConstants.ChannelsRef.childByAutoId().key,
-            let currentUid = Auth.auth().currentUser?.uid
-//            let messageId = FirebaseConstants.MessagesRef.childByAutoId().key
+            let currentUid = Auth.auth().currentUser?.uid,
+            let messageId = FirebaseConstants.MessageRef.childByAutoId().key
         else { return .failure(ChannelCreationError.failedToCreateUniqueIds) }
         
         let timeStamp = Date().timeIntervalSince1970
         var membersUids = selectedChatPartners.compactMap { $0.uid }
         membersUids.append(currentUid)
         
+        let newChannelBroadcast = AdminMessageType.channelCreation.rawValue
+        
         var channelDict: [String: Any] = [
             .id: channelId,
-            .lastMessage: "",
+            .lastMessage: newChannelBroadcast,
             .creationDate: timeStamp,
             .lastMessageTimeStamp: timeStamp,
             .membersUids: membersUids,
@@ -119,8 +138,11 @@ final class ChatPartnerPickerViewModel: ObservableObject {
         if let channelName = channelName, !channelName.isEmptyOrWhiteSpace {
             channelDict[.name] = channelName
         }
-                
+        
+        let messageDict : [String: Any] = [.type: newChannelBroadcast, .timeStamp: timeStamp, .owerUid: currentUid]
+        
         FirebaseConstants.ChannelsRef.child(channelId).setValue(channelDict)
+        FirebaseConstants.MessageRef.child(channelId).child(messageId).setValue(messageDict)
         
         membersUids.forEach { userId in
             /// keeping an index of the channel that a specific user belongs to

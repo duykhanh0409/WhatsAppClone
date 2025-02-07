@@ -19,6 +19,7 @@ struct ChannelItem: Identifiable {
     var membersUids: [String]
     var members: [UserItem]
     var thumbnailUrl: String?
+    let createdBy: String
     
     var isGroupChat: Bool {
         return membersCount > 2
@@ -41,7 +42,7 @@ struct ChannelItem: Identifiable {
         }
     }
     
-    static let placeholder = ChannelItem.init(id: "1", lastMessage: "Hello world", creationDate: Date(), lastMessageTimeStamp: Date(), membersCount: 2, adminUids: [], membersUids: [], members: [])
+    static let placeholder = ChannelItem.init(id: "1", lastMessage: "Hello world", creationDate: Date(), lastMessageTimeStamp: Date(), membersCount: 2, adminUids: [], membersUids: [], members: [], createdBy: "")
     
 }
 
@@ -59,6 +60,7 @@ extension ChannelItem {
         self.thumbnailUrl = dict[.thumbnailUrl] as? String ?? nil
         self.membersUids = dict[.membersUids] as? [String] ?? []
         self.members = dict[.members] as? [UserItem] ?? []
+        self.createdBy = dict[.createdBy] as? String ?? ""
     }
 }
 
@@ -73,4 +75,5 @@ extension String {
     static let membersUids = "membersUids"
     static let thumbnailUrl = "thumbnailUrl"
     static let members = "members"
+    static let createdBy = "createdBy"
 }

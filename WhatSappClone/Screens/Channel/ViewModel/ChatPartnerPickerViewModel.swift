@@ -76,8 +76,9 @@ final class ChatPartnerPickerViewModel: ObservableObject {
             selectedChatPartners.remove(at: index)
         } else {
             guard selectedChatPartners.count < ChannelContants.maxGroupParticipants else {
-                errorState.errorMessage = "Sorry, We only allow to a Maximum of \(ChannelContants.maxGroupParticipants) participants in a group chat."
-                errorState.showError.toggle()
+                let errorMessage = "Sorry, We only allow to a Maximum of \(ChannelContants.maxGroupParticipants) participants in a group chat."
+                showError(errorMessage)
+                
                 return
             }
             selectedChatPartners.append(item)
@@ -89,9 +90,9 @@ final class ChatPartnerPickerViewModel: ObservableObject {
         return isSelected
     }
     
-//    func buildDirectChannel() async -> Result<ChannelItem, Error> {
-//
-//    }
+    //    func buildDirectChannel() async -> Result<ChannelItem, Error> {
+    //
+    //    }
     
     func createDirectChannel(_ chatPartner: UserItem, completion: @escaping (_ newChannel: ChannelItem) -> Void ) {
         selectedChatPartners.append(chatPartner)
@@ -100,6 +101,7 @@ final class ChatPartnerPickerViewModel: ObservableObject {
         case .success(let newChannel):
             completion(newChannel)
         case .failure(let error):
+            showError("Sorry something went wrong while creating a direct channel. Please try again later.")
             print("💥 Failed to create direct channel: \(error)")
         }
     }
@@ -110,8 +112,14 @@ final class ChatPartnerPickerViewModel: ObservableObject {
         case .success(let newChannel):
             completion(newChannel)
         case .failure(let error):
+            showError("Sorry something went wrong while creating a group channel. Please try again later.")
             print("💥 Failed to create group channel: \(error)")
         }
+    }
+    
+    private func showError(_ errorMessage: String) {
+        errorState.errorMessage = errorMessage
+        errorState.showError = true
     }
     
     private func createChannel(_ channelName: String?) -> Result<ChannelItem, Error> {
@@ -138,7 +146,7 @@ final class ChatPartnerPickerViewModel: ObservableObject {
             .membersCount: membersUids.count,
             .adminUids: [currentUid],
             .createdBy: currentUid
-                
+            
         ]
         
         if let channelName = channelName, !channelName.isEmptyOrWhiteSpace {
@@ -153,8 +161,8 @@ final class ChatPartnerPickerViewModel: ObservableObject {
         membersUids.forEach { userId in
             /// keeping an index of the channel that a specific user belongs to
             FirebaseConstants.UserChannelsRef.child(userId).child(channelId).setValue(true)
-//            /// Makes sure that a direct channel is unique
-//            FirebaseConstants.UserDirectChannels.child(userId).child(channelId).setValue(true)
+            //            /// Makes sure that a direct channel is unique
+            //            FirebaseConstants.UserDirectChannels.child(userId).child(channelId).setValue(true)
         }
         
         if isDirectChannel {

@@ -96,14 +96,39 @@ final class ChatPartnerPickerViewModel: ObservableObject {
     
     func createDirectChannel(_ chatPartner: UserItem, completion: @escaping (_ newChannel: ChannelItem) -> Void ) {
         selectedChatPartners.append(chatPartner)
-        let channelCreation = createChannel(nil)
-        switch channelCreation {
-        case .success(let newChannel):
-            completion(newChannel)
-        case .failure(let error):
-            showError("Sorry something went wrong while creating a direct channel. Please try again later.")
-            print("💥 Failed to create direct channel: \(error)")
+        
+        Task {
+            if let channelId = await verifyIfDirectChannelExits(with: chatPartner.uid) {
+                let snapshot = try await FirebaseConstants.ChannelsRef.child(channelId).getData()
+                var channelDict = snapshot.value as! [String: Any]
+                var directChannel = ChannelItem(channelDict)
+                directChannel.members = selectedChatPartners
+                completion(directChannel)
+            } else {
+                let channelCreation = createChannel(nil)
+                switch channelCreation {
+                case .success(let newChannel):
+                    completion(newChannel)
+                case .failure(let error):
+                    showError("Sorry something went wrong while creating a direct channel. Please try again later.")
+                    print("💥 Failed to create direct channel: \(error)")
+                }
+            }
         }
+        
+       
+    }
+    
+    typealias ChannelId = String
+    private func verifyIfDirectChannelExits(with chatPartner: String) async -> ChannelId? {
+        guard let currentUid = Auth.auth().currentUser?.uid,
+              let snapshot = try? await FirebaseConstants.UserDirectChannels.child(currentUid).child(chatPartner).getData(),
+              snapshot.exists()
+        else { return nil }
+        
+        let directMessageDict = snapshot.value as? [String: Bool]
+        let channelId = directMessageDict?.compactMap{ $0.key}.first
+        return channelId
     }
     
     func createGroupChannel(_ groupName:String?, completion: @escaping (_ newChannel: ChannelItem) -> Void ) {

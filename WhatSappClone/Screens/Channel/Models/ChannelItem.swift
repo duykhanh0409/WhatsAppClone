@@ -45,7 +45,7 @@ struct ChannelItem: Identifiable {
     static let placeholder = ChannelItem.init(id: "1", lastMessage: "Hello world", creationDate: Date(), lastMessageTimeStamp: Date(), membersCount: 2, adminUids: [], membersUids: [], members: [], createdBy: "")
     
     private var groupMemeberNames: String {
-        let memeberCount = memebersExcludingMe.count
+        let memeberCount = membersCount - 1
         let fullNames: [String] = memebersExcludingMe.map {$0.username}
         
         if memeberCount == 2 {

@@ -14,6 +14,8 @@ final class ChannelTabViewModel: ObservableObject {
     @Published var newChannel: ChannelItem?
     @Published  var showChatPartnerPickerView = false
     @Published var channels = [ChannelItem]()
+    typealias ChannelId = String
+    @Published var ChannelDictionary: [ChannelId: ChannelItem] = [:]
     
     init() {
         fetchCurrentUserChannels()
@@ -45,7 +47,8 @@ final class ChannelTabViewModel: ObservableObject {
             var channel = ChannelItem(dict)
             self.getChannelMembers(channel) { members in
                 channel.members = members
-                self.channels.append(channel)
+                self.ChannelDictionary[channelId] = channel
+                self.reloadData()
                 print("Channel members: \(channel.title)")
             }
         } withCancel: { error in
@@ -55,10 +58,17 @@ final class ChannelTabViewModel: ObservableObject {
     }
     
     private func getChannelMembers(_ channel: ChannelItem, completion: @escaping (_ members:[UserItem]) -> Void) {
-        UserService.getUsers(with: channel.membersUids) { userNode in
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        let channelMembersUids = Array(channel.membersUids.filter {$0 != currentUid}.prefix(2))
+        UserService.getUsers(with: channelMembersUids) { userNode in
             completion(userNode.users)
         }
         
+    }
+    
+    private func reloadData() {
+        self.channels = Array(ChannelDictionary.values)
+        self.channels.sort {$0.lastMessageTimeStamp > $1.lastMessageTimeStamp}
     }
     
 }

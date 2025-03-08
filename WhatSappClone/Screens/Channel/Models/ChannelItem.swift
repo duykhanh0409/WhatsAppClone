@@ -58,6 +58,14 @@ struct ChannelItem: Identifiable {
         return "unknow"
     }
     
+    var isCreatedByMe: Bool {
+        return createdBy == Auth.auth().currentUser?.uid ?? ""
+    }
+    
+    var creatorName: String {
+        return members.first {$0.uid == createdBy}?.username ?? "Someone"
+    }
+    
 }
 
 extension ChannelItem {

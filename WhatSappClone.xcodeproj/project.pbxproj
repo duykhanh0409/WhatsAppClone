@@ -57,6 +57,8 @@
 		8B3561FA2D44C65600A83E25 /* TextInputArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561F92D44C65600A83E25 /* TextInputArea.swift */; };
 		8B3561FC2D44C76200A83E25 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561FB2D44C76200A83E25 /* MessageListView.swift */; };
 		8B3561FE2D44CA1000A83E25 /* MessageListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561FD2D44CA1000A83E25 /* MessageListController.swift */; };
+		8B384B012D7C446D001526FB /* ChannelCreateTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B384B002D7C446D001526FB /* ChannelCreateTextView.swift */; };
+		8B384B032D7C44D3001526FB /* AdminMessageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B384B022D7C44D3001526FB /* AdminMessageTextView.swift */; };
 		8B717BEC2D47411000D7C95F /* ChatPartnerPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B717BEB2D47411000D7C95F /* ChatPartnerPickerScreen.swift */; };
 		8B717BEE2D4744EA00D7C95F /* ChatPartnerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B717BED2D4744EA00D7C95F /* ChatPartnerRowView.swift */; };
 		8B717BF12D4746AB00D7C95F /* ChatPartnerPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B717BF02D4746AB00D7C95F /* ChatPartnerPickerViewModel.swift */; };
@@ -110,6 +112,8 @@
 		8B3561F92D44C65600A83E25 /* TextInputArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputArea.swift; sourceTree = "<group>"; };
 		8B3561FB2D44C76200A83E25 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 		8B3561FD2D44CA1000A83E25 /* MessageListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListController.swift; sourceTree = "<group>"; };
+		8B384B002D7C446D001526FB /* ChannelCreateTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCreateTextView.swift; sourceTree = "<group>"; };
+		8B384B022D7C44D3001526FB /* AdminMessageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMessageTextView.swift; sourceTree = "<group>"; };
 		8B717BEB2D47411000D7C95F /* ChatPartnerPickerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPartnerPickerScreen.swift; sourceTree = "<group>"; };
 		8B717BED2D4744EA00D7C95F /* ChatPartnerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPartnerRowView.swift; sourceTree = "<group>"; };
 		8B717BF02D4746AB00D7C95F /* ChatPartnerPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPartnerPickerViewModel.swift; sourceTree = "<group>"; };
@@ -383,6 +387,8 @@
 				8B06BED52D44D9B2000E5229 /* BubbleTailView.swift */,
 				8B06BEDA2D44E53E000E5229 /* BubbleImageView.swift */,
 				8B06BEDC2D44EA38000E5229 /* BubbdleAudioView.swift */,
+				8B384B002D7C446D001526FB /* ChannelCreateTextView.swift */,
+				8B384B022D7C44D3001526FB /* AdminMessageTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -586,6 +592,7 @@
 				8B06BED42D44D8CD000E5229 /* BubbleTextView.swift in Sources */,
 				8BBBF97C2D46293500867751 /* FirebaseConstants.swift in Sources */,
 				8B06BF162D44FE48000E5229 /* SignUpScreen.swift in Sources */,
+				8B384B032D7C44D3001526FB /* AdminMessageTextView.swift in Sources */,
 				8B3561F42D44BD3200A83E25 /* SettingsItem.swift in Sources */,
 				8B717BEC2D47411000D7C95F /* ChatPartnerPickerScreen.swift in Sources */,
 				8BDA084E2D4F3DBF002C649B /* String+Extensions.swift in Sources */,
@@ -606,6 +613,7 @@
 				8BDA084B2D4F1E3B002C649B /* ChannelTabViewModel.swift in Sources */,
 				8B75DF472D42315D00C9842C /* CallsTabScreen.swift in Sources */,
 				8BAEBDFB2D7BE9A400CA32F3 /* MessageService.swift in Sources */,
+				8B384B012D7C446D001526FB /* ChannelCreateTextView.swift in Sources */,
 				8BF377DA2D420DF1004B2E1D /* MainTabView.swift in Sources */,
 				8B06BF102D44FB50000E5229 /* AuthHeaderView.swift in Sources */,
 				8B06BED92D44DAB3000E5229 /* CustomModifier.swift in Sources */,

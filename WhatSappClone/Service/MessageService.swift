@@ -44,6 +44,7 @@ struct MessageService {
                 let messageDict = value as? [String: Any] ?? [:]
                 let message = MessageItem(id: key, dict: messageDict)
                 messages.append(message)
+                onComplete(messages)
             }
         }withCancel: { error in
             print("Error when fetch message \(error.localizedDescription)")

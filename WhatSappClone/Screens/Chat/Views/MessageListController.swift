@@ -16,27 +16,26 @@ final class MessageListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViews()
-        setupMessageListner()
+        setUpMessageListners()
     }
     
-    init(viewModel: ChatRoomViewModel) {
+    init(_ viewModel: ChatRoomViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
     deinit {
-        subscription.forEach {$0.cancel()}
-        subscription.removeAll()
+        subscriptions.forEach { $0.cancel() }
+        subscriptions.removeAll()
     }
     
-     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: Properties
     private let viewModel: ChatRoomViewModel
-    private var subscription = Set<AnyCancellable>()
+    private var subscriptions = Set<AnyCancellable>()
     private let cellIdentifier = "MessageListControllerCells"
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -47,8 +46,6 @@ final class MessageListController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
-    
-    
     
     
     // MARK: Methods
@@ -65,13 +62,13 @@ final class MessageListController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
     
-    private func setupMessageListner() {
+    private func setUpMessageListners() {
         let delay = 200
-        viewModel.$messages.debounce(for: .milliseconds(delay), scheduler: DispatchQueue.main)
-            .sink { [weak self] _ in
+        viewModel.$messages
+            .debounce(for: .milliseconds(delay), scheduler: DispatchQueue.main)
+            .sink {[weak self] _ in
                 self?.tableView.reloadData()
-            }
-            .store(in: &subscription)
+            }.store(in: &subscriptions)
     }
 }
 
@@ -84,6 +81,8 @@ extension MessageListController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         let message = viewModel.messages[indexPath.row]
         
+//        let message = MessageItem.stubMessages[indexPath.row]
+        print("message \(message)")
         cell.contentConfiguration = UIHostingConfiguration {
             switch message.type {
             case .text:
@@ -107,5 +106,5 @@ extension MessageListController: UITableViewDelegate, UITableViewDataSource {
 }
 
 #Preview {
-    MessageListView(viewModel: ChatRoomViewModel(channel: .placeholder))
+    MessageListView(ChatRoomViewModel(channel: .placeholder))
 }

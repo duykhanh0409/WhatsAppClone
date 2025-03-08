@@ -81,8 +81,6 @@ extension MessageListController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         let message = viewModel.messages[indexPath.row]
         
-//        let message = MessageItem.stubMessages[indexPath.row]
-        print("message \(message)")
         cell.contentConfiguration = UIHostingConfiguration {
             switch message.type {
             case .text:

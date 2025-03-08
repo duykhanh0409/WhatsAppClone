@@ -178,7 +178,7 @@ final class ChatPartnerPickerViewModel: ObservableObject {
             channelDict[.name] = channelName
         }
         
-        let messageDict : [String: Any] = [.type: newChannelBroadcast, .timeStamp: timeStamp, .owerUid: currentUid]
+        let messageDict : [String: Any] = [.type: newChannelBroadcast, .timeStamp: timeStamp, .ownerUid: currentUid]
         
         FirebaseConstants.ChannelsRef.child(channelId).setValue(channelDict)
         FirebaseConstants.MessageRef.child(channelId).child(messageId).setValue(messageDict)

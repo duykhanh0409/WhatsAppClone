@@ -10,10 +10,11 @@ import Combine
 
 final class ChatRoomViewModel: ObservableObject {
     @Published var textMessage = ""
+    @Published var messages = [MessageItem]()
     private var channel: ChannelItem
     private var subscription = Set<AnyCancellable>()
     
-    @Published var currentUser: UserItem?
+    private var currentUser: UserItem?
     
     init(channel: ChannelItem) {
         self.channel = channel
@@ -31,6 +32,7 @@ final class ChatRoomViewModel: ObservableObject {
             switch authState {
             case .loggedIn(let currentUser):
                 self.currentUser = currentUser
+                self.getMessages()
             default :
                 break
             }
@@ -43,6 +45,12 @@ final class ChatRoomViewModel: ObservableObject {
         MessageService.sentTextMessage(to: channel, from: currentUser, textMessage) {
             self.textMessage = ""
             print("Message is sending")
+        }
+    }
+    
+    private func getMessages() {
+        MessageService.getMessage(for: channel) { [weak self] messages  in
+            self?.messages = messages
         }
     }
 }

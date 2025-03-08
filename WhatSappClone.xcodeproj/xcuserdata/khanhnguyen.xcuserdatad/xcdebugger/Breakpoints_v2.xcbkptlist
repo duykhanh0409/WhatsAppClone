@@ -164,5 +164,67 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7FC2214F-1D37-43E8-99F6-8B9AECBC5287"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhatSappClone/Screens/Chat/Views/MessageListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "setupMessageListner()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7FC2214F-1D37-43E8-99F6-8B9AECBC5287 - 21c85cf6cd483382"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WhatSappClone.MessageListController.setupMessageListner() -&gt; ()"
+                  moduleName = "WhatSappClone.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khanhnguyen/Documents/personal_project/SwiftUI/WhatSappClone/WhatSappClone/Screens/Chat/Views/MessageListController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71">
+               </Location>
+               <Location
+                  uuid = "7FC2214F-1D37-43E8-99F6-8B9AECBC5287 - 8f9e831eb1d317df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;WhatSappClone.MessageItem&gt;) -&gt; () in WhatSappClone.MessageListController.setupMessageListner() -&gt; ()"
+                  moduleName = "WhatSappClone.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khanhnguyen/Documents/personal_project/SwiftUI/WhatSappClone/WhatSappClone/Screens/Chat/Views/MessageListController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50EA11DE-B6DA-4090-8017-CCEB8EA64F78"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhatSappClone/Screens/Chat/Views/MessageListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "setupMessageListner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

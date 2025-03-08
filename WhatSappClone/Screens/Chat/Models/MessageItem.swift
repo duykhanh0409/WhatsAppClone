@@ -7,15 +7,19 @@
 
 import Foundation
 import SwiftUI
+import FirebaseAuth
 
 struct MessageItem: Identifiable {
-    let id = UUID().uuidString
+    let id : String
     let text: String
     let type: MessageType
-    let direction: MessageDirection
+    let ownerUid: String
+    var direction: MessageDirection {
+        return ownerUid == Auth.auth().currentUser?.uid ? .sent : .received
+    }
     
-    static let sentPlaceholder = MessageItem(text: "Holy Spagetti", type: .text, direction: .sent)
-    static let receivedPlaceholder = MessageItem(text: "Hey Dude whats up ", type: .text, direction: .received)
+    static let sentPlaceholder = MessageItem(id: UUID().uuidString, text: "Holy Spagetti", type: .text,  ownerUid: "1")
+    static let receivedPlaceholder = MessageItem(id: UUID().uuidString, text: "Hey Dude whats up ", type: .text,  ownerUid: "2")
 
     var alignment: Alignment {
         return direction == .received ? .leading : .trailing
@@ -30,18 +34,27 @@ struct MessageItem: Identifiable {
     }
     
     static let stubMessages: [MessageItem] = [
-        MessageItem(text: "Hi There", type: .text, direction: .sent),
-        MessageItem(text: "Check out this Photo", type: .photo, direction: .received),
-        MessageItem(text: "Play out this Video", type: .video, direction: .sent),
-        MessageItem(text: "Audio", type: .audio, direction: .sent)
+        MessageItem(id: UUID().uuidString, text: "Hi There", type: .text, ownerUid: "3"),
+        MessageItem(id: UUID().uuidString, text: "Check out this Photo", type: .photo, ownerUid: "2"),
+        MessageItem(id: UUID().uuidString, text: "Play out this Video", type: .video, ownerUid: "5"),
+        MessageItem(id: UUID().uuidString, text: "Audio", type: .audio, ownerUid: "1")
     ]
 }
 
+extension MessageItem {
+    init(id: String, dict: [String: Any]){
+        self.id = id
+        self.text = dict[.text] as? String ?? ""
+        let type = dict[.type] as? String ?? "Text"
+        self.type = MessageType(type)
+        self.ownerUid = dict[.ownerUid] as? String ?? ""
+    }
+}
 
 
 extension String {
     static let `type` = "type"
     static let timeStamp = "timeStamp"
-    static let owerUid = "owerUid"
+    static let ownerUid = "ownerUid"
     static let text = "text"
 }

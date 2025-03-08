@@ -25,12 +25,28 @@ struct MessageService {
             .text: textMessage,
             .type: MessageType.text.title,
             .timeStamp: timeStamp,
-            .owerUid: currentUser?.uid ?? "",
+            .ownerUid: currentUser?.uid ?? "",
         ]
         
         FirebaseConstants.ChannelsRef.child(channel.id).updateChildValues(channelDict)
         FirebaseConstants.MessageRef.child(channel.id).child(messageId).setValue(messageDict)
         
         onComplete()
+    }
+    
+    static func getMessage(for channel: ChannelItem, onComplete: @escaping ([MessageItem]) -> Void) {
+        FirebaseConstants.MessageRef.child(channel.id).observe(.value) { snapshot in
+            guard let dict = snapshot.value as? [String: Any] else {
+                return
+            }
+            var messages: [MessageItem] = []
+            dict.forEach { key, value in
+                let messageDict = value as? [String: Any] ?? [:]
+                let message = MessageItem(id: key, dict: messageDict)
+                messages.append(message)
+            }
+        }withCancel: { error in
+            print("Error when fetch message \(error.localizedDescription)")
+        }
     }
 }

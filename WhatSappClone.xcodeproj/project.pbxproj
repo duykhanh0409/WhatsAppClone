@@ -59,6 +59,8 @@
 		8B3561FE2D44CA1000A83E25 /* MessageListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3561FD2D44CA1000A83E25 /* MessageListController.swift */; };
 		8B384B012D7C446D001526FB /* ChannelCreateTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B384B002D7C446D001526FB /* ChannelCreateTextView.swift */; };
 		8B384B032D7C44D3001526FB /* AdminMessageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B384B022D7C44D3001526FB /* AdminMessageTextView.swift */; };
+		8B70DE9F2D89B489004ED2BF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8B70DE9E2D89B489004ED2BF /* Kingfisher */; };
+		8B70DEA42D89B571004ED2BF /* CircularProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70DEA32D89B571004ED2BF /* CircularProfileImageView.swift */; };
 		8B717BEC2D47411000D7C95F /* ChatPartnerPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B717BEB2D47411000D7C95F /* ChatPartnerPickerScreen.swift */; };
 		8B717BEE2D4744EA00D7C95F /* ChatPartnerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B717BED2D4744EA00D7C95F /* ChatPartnerRowView.swift */; };
 		8B717BF12D4746AB00D7C95F /* ChatPartnerPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B717BF02D4746AB00D7C95F /* ChatPartnerPickerViewModel.swift */; };
@@ -114,6 +116,7 @@
 		8B3561FD2D44CA1000A83E25 /* MessageListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListController.swift; sourceTree = "<group>"; };
 		8B384B002D7C446D001526FB /* ChannelCreateTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCreateTextView.swift; sourceTree = "<group>"; };
 		8B384B022D7C44D3001526FB /* AdminMessageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMessageTextView.swift; sourceTree = "<group>"; };
+		8B70DEA32D89B571004ED2BF /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
 		8B717BEB2D47411000D7C95F /* ChatPartnerPickerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPartnerPickerScreen.swift; sourceTree = "<group>"; };
 		8B717BED2D4744EA00D7C95F /* ChatPartnerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPartnerRowView.swift; sourceTree = "<group>"; };
 		8B717BF02D4746AB00D7C95F /* ChatPartnerPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPartnerPickerViewModel.swift; sourceTree = "<group>"; };
@@ -148,6 +151,7 @@
 				8B06BEF42D44F149000E5229 /* FirebaseDynamicLinks in Frameworks */,
 				8B06BEE62D44F149000E5229 /* FirebaseAppCheck in Frameworks */,
 				8B06BEEA2D44F149000E5229 /* FirebaseAuth in Frameworks */,
+				8B70DE9F2D89B489004ED2BF /* Kingfisher in Frameworks */,
 				8B06BEE02D44F149000E5229 /* FirebaseAnalytics in Frameworks */,
 				8B06BEF62D44F149000E5229 /* FirebaseFirestore in Frameworks */,
 				8B06BEFC2D44F149000E5229 /* FirebaseFunctionsCombine-Community in Frameworks */,
@@ -396,6 +400,7 @@
 		8B486D8A2CC546FC00185154 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				8B70DEA32D89B571004ED2BF /* CircularProfileImageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -543,6 +548,7 @@
 			mainGroup = 8B3150E42CC38CD4005865E5;
 			packageReferences = (
 				8B06BEDE2D44EFB3000E5229 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8B70DE9D2D89B489004ED2BF /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 8B3150EE2CC38CD4005865E5 /* Products */;
 			projectDirPath = "";
@@ -608,6 +614,7 @@
 				8B1F84432D565BFB008A838B /* MessageItems+Types.swift in Sources */,
 				8B3561FE2D44CA1000A83E25 /* MessageListController.swift in Sources */,
 				8BAC68522D4891A600E77D57 /* SelectedChatPartnerView.swift in Sources */,
+				8B70DEA42D89B571004ED2BF /* CircularProfileImageView.swift in Sources */,
 				8BAC68572D4A2F7100E77D57 /* UserService.swift in Sources */,
 				8B3561F12D44BC3400A83E25 /* SettingsItemView.swift in Sources */,
 				8BDA084B2D4F1E3B002C649B /* ChannelTabViewModel.swift in Sources */,
@@ -842,6 +849,14 @@
 				minimumVersion = 11.7.0;
 			};
 		};
+		8B70DE9D2D89B489004ED2BF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.3.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -949,6 +964,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8B06BEDE2D44EFB3000E5229 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		8B70DE9E2D89B489004ED2BF /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B70DE9D2D89B489004ED2BF /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

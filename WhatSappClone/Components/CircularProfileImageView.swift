@@ -6,13 +6,94 @@
 //
 
 import SwiftUI
+import Kingfisher
 
-struct CircularImageView: View {
+struct CircularProfileImageView: View {
+    let profileImageUrl: String?
+    let size: Size
+    let fallbackImage: FallBackImage
+    
+    init(_ profileImageUrl: String? = nil, size: Size) {
+        self.profileImageUrl = profileImageUrl
+        self.size = size
+        self.fallbackImage = .directChatIcon
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        if let profileImageUrl = profileImageUrl {
+            KFImage(URL(string: profileImageUrl))
+                .resizable()
+                .placeholder { ProgressView()}
+                .scaledToFit()
+                .frame(width: size.dimension, height: size.dimension)
+                .clipped()
+        }else {
+            placeholderImageView()
+        }
+       
+    }
+    
+    private func placeholderImageView() -> some View {
+        Image(systemName: fallbackImage.rawValue)
+            .resizable()
+            .scaledToFit()
+            .imageScale(.large)
+            .foregroundStyle(Color.placeholder)
+            .frame(width: size.dimension, height: size.dimension)
+            .background(Color.white)
+            .clipped()
     }
 }
 
+extension CircularProfileImageView {
+    enum Size {
+        case mini, xSmall, small, medium, large, xLarge
+        case custom(CGFloat)
+        
+        var dimension: CGFloat {
+            switch self {
+            case .mini:
+                return 30
+            case .xSmall:
+                return 40
+            case .small:
+                return 50
+            case .medium:
+                return 60
+            case .large:
+                return 80
+            case .xLarge:
+                return 120
+            case .custom(let dimen):
+                return dimen
+            }
+        }
+    }
+    
+    enum FallBackImage: String {
+        case directChatIcon = "person.circle.fill"
+        case groupChatIcon = "person.2.circle.fill"
+        
+        init(for memebersCount: Int){
+            switch memebersCount {
+            case 2:
+                self = .directChatIcon
+            default:
+                self = .groupChatIcon
+            }
+        }
+    }
+}
+
+extension CircularProfileImageView {
+    init(_ channel: ChannelItem, size: Size) {
+        self.profileImageUrl = channel.coverImageUrl
+        self.size = size
+        self.fallbackImage = FallBackImage(for: channel.membersCount)
+    }
+}
+
+
 #Preview {
-    CircularImageView()
+    CircularProfileImageView( size: .large)
 }

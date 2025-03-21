@@ -61,6 +61,7 @@
 		8B384B032D7C44D3001526FB /* AdminMessageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B384B022D7C44D3001526FB /* AdminMessageTextView.swift */; };
 		8B70DE9F2D89B489004ED2BF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8B70DE9E2D89B489004ED2BF /* Kingfisher */; };
 		8B70DEA42D89B571004ED2BF /* CircularProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70DEA32D89B571004ED2BF /* CircularProfileImageView.swift */; };
+		8B70DEA62D89C35B004ED2BF /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70DEA52D89C34B004ED2BF /* Date+Extensions.swift */; };
 		8B717BEC2D47411000D7C95F /* ChatPartnerPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B717BEB2D47411000D7C95F /* ChatPartnerPickerScreen.swift */; };
 		8B717BEE2D4744EA00D7C95F /* ChatPartnerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B717BED2D4744EA00D7C95F /* ChatPartnerRowView.swift */; };
 		8B717BF12D4746AB00D7C95F /* ChatPartnerPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B717BF02D4746AB00D7C95F /* ChatPartnerPickerViewModel.swift */; };
@@ -117,6 +118,7 @@
 		8B384B002D7C446D001526FB /* ChannelCreateTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCreateTextView.swift; sourceTree = "<group>"; };
 		8B384B022D7C44D3001526FB /* AdminMessageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMessageTextView.swift; sourceTree = "<group>"; };
 		8B70DEA32D89B571004ED2BF /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
+		8B70DEA52D89C34B004ED2BF /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		8B717BEB2D47411000D7C95F /* ChatPartnerPickerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPartnerPickerScreen.swift; sourceTree = "<group>"; };
 		8B717BED2D4744EA00D7C95F /* ChatPartnerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPartnerRowView.swift; sourceTree = "<group>"; };
 		8B717BF02D4746AB00D7C95F /* ChatPartnerPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPartnerPickerViewModel.swift; sourceTree = "<group>"; };
@@ -497,6 +499,7 @@
 		8BDA084C2D4F3D8E002C649B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8B70DEA52D89C34B004ED2BF /* Date+Extensions.swift */,
 				8BDA084D2D4F3DBF002C649B /* String+Extensions.swift */,
 			);
 			path = Extensions;
@@ -579,6 +582,7 @@
 			files = (
 				8BBBF9732D46117E00867751 /* RootScreen.swift in Sources */,
 				8B06BED22D44D760000E5229 /* MessageItem.swift in Sources */,
+				8B70DEA62D89C35B004ED2BF /* Date+Extensions.swift in Sources */,
 				8B3561F82D44C4C600A83E25 /* ChatRoomScreen.swift in Sources */,
 				8B06BEDD2D44EA38000E5229 /* BubbdleAudioView.swift in Sources */,
 				8BDA08492D4F164C002C649B /* ChannelItem.swift in Sources */,

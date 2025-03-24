@@ -23,11 +23,6 @@ struct ChannelTabScreen: View {
                     } label: {
                         ChannelItemView(channel: channel)
                     }
-//                    NavigationLink {
-//                        ChatRoomScreen(channel: channel)
-//                    } label: {
-//                        ChannelItemView(channel: channel)
-//                    }
                    
                 }
                 
@@ -42,7 +37,10 @@ struct ChannelTabScreen: View {
                 trailingNavItems()
             }
             .navigationDestination(for: ChannelTabRoutes.self) { route in
-                destinationView(for: route)
+                switch route {
+                case .chatRoom(let channel):
+                    ChatRoomScreen(channel: channel)
+                }
             }
             .sheet(isPresented: $viewModel.showChatPartnerPickerView) {
                 ChatPartnerPickerScreen {channel in

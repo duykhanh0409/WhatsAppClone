@@ -248,6 +248,7 @@
 		8B3150EF2CC38CD4005865E5 /* WhatSappClone */ = {
 			isa = PBXGroup;
 			children = (
+				8B9E9B392D91AEE900E21282 /* LearnSwiftConcurrency */,
 				8BDA084C2D4F3D8E002C649B /* Extensions */,
 				8BAC68552D4A2F5700E77D57 /* Service */,
 				8BBBF97A2D46292500867751 /* Utils */,
@@ -428,6 +429,13 @@
 				8BDA084A2D4F1E3B002C649B /* ChannelTabViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8B9E9B392D91AEE900E21282 /* LearnSwiftConcurrency */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LearnSwiftConcurrency;
 			sourceTree = "<group>";
 		};
 		8BAC68552D4A2F5700E77D57 /* Service */ = {

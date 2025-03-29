@@ -184,7 +184,6 @@ final class ChatPartnerPickerViewModel: ObservableObject {
             /// keeping an index of the channel that a specific user belongs to
             FirebaseConstants.UserChannelsRef.child(userId).child(channelId).setValue(true)
             //            /// Makes sure that a direct channel is unique
-            //            FirebaseConstants.UserDirectChannels.child(userId).child(channelId).setValue(true)
         }
         
         if isDirectChannel {

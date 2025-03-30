@@ -219,7 +219,7 @@ final class ChatPartnerPickerViewModel: ObservableObject {
         var newChannelItem = ChannelItem(channelDict)
         newChannelItem.members = selectedChatPartners
         if let currentUser {
-            directChannel.members.append(currentUser)
+            newChannelItem.members.append(currentUser)
         }
         return .success(newChannelItem)
         

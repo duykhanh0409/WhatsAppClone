@@ -66,7 +66,6 @@ final class ChatRoomViewModel: ObservableObject {
             self.channel.members.append(contentsOf: userNode.users)
             self.channel.members.append(currentUser)
             self.getMessages()
-            print("getAllChannelMembers \(channel.members.map {$0.username})")
         }
     }
 }

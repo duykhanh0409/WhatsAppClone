@@ -32,6 +32,11 @@ final class ChatRoomViewModel: ObservableObject {
             switch authState {
             case .loggedIn(let currentUser):
                 self.currentUser = currentUser
+                if self.channel.allMemebersFetched {
+                    self.getMessages()
+                }else {
+                    self.getAllChannelMembers()
+                }
                 self.getAllChannelMembers()
 //                self.getMessages()
             default :

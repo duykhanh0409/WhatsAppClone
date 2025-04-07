@@ -20,9 +20,12 @@ final class ChannelTabViewModel: ObservableObject {
     @Published  var showChatPartnerPickerView = false
     @Published var channels = [ChannelItem]()
     typealias ChannelId = String
-    @Published var ChannelDictionary: [ChannelId: ChannelItem] = [:]
     
-    init() {
+    @Published var ChannelDictionary: [ChannelId: ChannelItem] = [:]
+    private let currentUser: UserItem
+    
+    init(_ currentUser: UserItem) {
+        self.currentUser = currentUser
         fetchCurrentUserChannels()
     }
     
@@ -52,6 +55,9 @@ final class ChannelTabViewModel: ObservableObject {
             var channel = ChannelItem(dict)
             self.getChannelMembers(channel) { members in
                 channel.members = members
+                if channel.isGroupChat == false {
+                    channel.members.append(self.currentUser)
+                }
                 self.ChannelDictionary[channelId] = channel
                 self.reloadData()
                 print("Channel members: \(channel.title)")

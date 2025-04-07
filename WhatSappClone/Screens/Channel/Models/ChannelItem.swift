@@ -78,6 +78,10 @@ struct ChannelItem: Identifiable, Hashable {
         return members.first {$0.uid == createdBy}?.username ?? "Someone"
     }
     
+    var allMemebersFetched: Bool {
+        return members.count == membersUids.count
+    }
+    
 }
 
 extension ChannelItem {

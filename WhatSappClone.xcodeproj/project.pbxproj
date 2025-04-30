@@ -80,7 +80,6 @@
 		8BDA084B2D4F1E3B002C649B /* ChannelTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA084A2D4F1E3B002C649B /* ChannelTabViewModel.swift */; };
 		8BDA084E2D4F3DBF002C649B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA084D2D4F3DBF002C649B /* String+Extensions.swift */; };
 		8BF377DA2D420DF1004B2E1D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF377D92D420DF1004B2E1D /* MainTabView.swift */; };
-		8BF7F0882DBE09640084831F /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF7F0872DBE09610084831F /* test.swift */; };
 		8BFA763D2D42199500B4FB50 /* UpdatesTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA763C2D42199500B4FB50 /* UpdatesTabScreen.swift */; };
 /* End PBXBuildFile section */
 
@@ -138,7 +137,6 @@
 		8BDA084A2D4F1E3B002C649B /* ChannelTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabViewModel.swift; sourceTree = "<group>"; };
 		8BDA084D2D4F3DBF002C649B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		8BF377D92D420DF1004B2E1D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		8BF7F0872DBE09610084831F /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		8BFA763C2D42199500B4FB50 /* UpdatesTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTabScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -427,7 +425,6 @@
 		8B717BEF2D47468D00D7C95F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				8BF7F0872DBE09610084831F /* test.swift */,
 				8B717BF02D4746AB00D7C95F /* ChatPartnerPickerViewModel.swift */,
 				8BDA084A2D4F1E3B002C649B /* ChannelTabViewModel.swift */,
 			);
@@ -634,7 +631,6 @@
 				8B3561F12D44BC3400A83E25 /* SettingsItemView.swift in Sources */,
 				8BDA084B2D4F1E3B002C649B /* ChannelTabViewModel.swift in Sources */,
 				8B75DF472D42315D00C9842C /* CallsTabScreen.swift in Sources */,
-				8BF7F0882DBE09640084831F /* test.swift in Sources */,
 				8BAEBDFB2D7BE9A400CA32F3 /* MessageService.swift in Sources */,
 				8B384B012D7C446D001526FB /* ChannelCreateTextView.swift in Sources */,
 				8BF377DA2D420DF1004B2E1D /* MainTabView.swift in Sources */,

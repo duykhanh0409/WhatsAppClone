@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 import FirebaseAuth
 
 struct ChannelItem: Identifiable, Hashable {
@@ -25,21 +26,21 @@ struct ChannelItem: Identifiable, Hashable {
         return membersCount > 2
     }
     
-    var coverImageUrl:String? {
+    var coverImageUrl: String? {
         if let thumbnailUrl = thumbnailUrl {
             return thumbnailUrl
         }
         
         if isGroupChat == false {
-            return memebersExcludingMe.first?.profileImageUrl
+            return membersExcludingMe.first?.profileImageUrl
         }
         
         return nil
     }
     
-    var memebersExcludingMe: [UserItem] {
-        guard let currentUid = Auth.auth().currentUser?.uid else {return []}
-        return members.filter {$0.uid != currentUid}
+    var membersExcludingMe: [UserItem] {
+        guard let currentUid = Auth.auth().currentUser?.uid else { return [] }
+        return members.filter { $0.uid != currentUid }
     }
     
     var title: String {
@@ -48,26 +49,26 @@ struct ChannelItem: Identifiable, Hashable {
         }
         
         if isGroupChat {
-            return groupMemeberNames
-        }else {
-            return memebersExcludingMe.first?.username ?? "Unknown user"
+            return groupMemberNames
+        } else {
+            return membersExcludingMe.first?.username ?? "Unknown"
         }
     }
     
-    static let placeholder = ChannelItem.init(id: "1", lastMessage: "Hello world", creationDate: Date(), lastMessageTimeStamp: Date(), membersCount: 2, adminUids: [], membersUids: [], members: [], createdBy: "")
-    
-    private var groupMemeberNames: String {
-        let memeberCount = membersCount - 1
-        let fullNames: [String] = memebersExcludingMe.map {$0.username}
+    private var groupMemberNames: String {
+        let membersCount = membersCount - 1
+        let fullNames: [String] = membersExcludingMe.map { $0.username }
         
-        if memeberCount == 2 {
-            // username 1 and user name 2
+        if membersCount == 2 {
+            // usernmae1 and username2
             return fullNames.joined(separator: " and ")
-        } else if memeberCount > 2 {
-            return fullNames.prefix(2).joined(separator: ", ") + " and \(memeberCount - 2) others"
+        } else if membersCount > 2 {
+            // usernmae1, username2 and 10 others
+            let remainingCount = membersCount - 2
+            return fullNames.prefix(2).joined(separator: ", ") + ", and \(remainingCount) " + "others"
         }
         
-        return "unknow"
+        return "Unknown"
     }
     
     var isCreatedByMe: Bool {
@@ -75,12 +76,15 @@ struct ChannelItem: Identifiable, Hashable {
     }
     
     var creatorName: String {
-        return members.first {$0.uid == createdBy}?.username ?? "Someone"
+        return members.first { $0.uid == createdBy }?.username ?? "Someone"
     }
     
-    var allMemebersFetched: Bool {
-        return members.count == membersUids.count
+    var allMembersFetched: Bool {
+        return members.count == membersCount
     }
+    
+    static let placeholder = ChannelItem.init(id: "1", lastMessage: "Hello world", creationDate: Date(), lastMessageTimeStamp: Date(), membersCount: 2, adminUids: [], membersUids: [], members: [], createdBy: "")
+    
     
 }
 

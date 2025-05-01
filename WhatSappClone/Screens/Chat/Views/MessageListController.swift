@@ -129,5 +129,5 @@ extension MessageListController: UITableViewDelegate, UITableViewDataSource {
 }
 
 #Preview {
-    MessageListView(ChatRoomViewModel(channel: .placeholder))
+    MessageListView(ChatRoomViewModel(.placeholder))
 }

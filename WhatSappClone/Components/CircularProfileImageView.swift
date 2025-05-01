@@ -40,8 +40,8 @@ struct CircularProfileImageView: View {
             .imageScale(.large)
             .foregroundStyle(Color.placeholder)
             .frame(width: size.dimension, height: size.dimension)
-//            .background(Color.white)
             .clipped()
+//            .background(Color.white)
     }
 }
 

@@ -117,6 +117,7 @@
 		8B3561FB2D44C76200A83E25 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 		8B3561FD2D44CA1000A83E25 /* MessageListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListController.swift; sourceTree = "<group>"; };
 		8B37A8EE2DC368E40099BCC3 /* MediaAttachmentPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaAttachmentPreview.swift; sourceTree = "<group>"; };
+		8B37A8F22DC3CF010099BCC3 /* testCombine.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = testCombine.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8B384B002D7C446D001526FB /* ChannelCreateTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCreateTextView.swift; sourceTree = "<group>"; };
 		8B384B022D7C44D3001526FB /* AdminMessageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMessageTextView.swift; sourceTree = "<group>"; };
 		8B70DEA32D89B571004ED2BF /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
@@ -454,6 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				8BAEBDF82D7BE63200CA32F3 /* ChatRoomViewModel.swift */,
+				8B37A8F22DC3CF010099BCC3 /* testCombine.playground */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
